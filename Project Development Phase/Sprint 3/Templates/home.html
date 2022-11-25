@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Handwritten Digit Recognition</title>
+        <link rel="icon" type="image/svg" sizes="32x32" href="{{url_for('static',filename='images/icon.svg')}}" />
+        <link rel="stylesheet" href="{{url_for('static',filename='css/main.css')}}" />
+        <script src="https://unpkg.com/feather-icons"></script>
+        <script defer src="{{url_for('static',filename='js/script.js')}}"></script>
+    </head>
+
+    <body>
+<h1 class="heading__main">A NOVEL METHOD FOR HANDWRITTEN DIGITS RECOGNIZER</h1>
+                <p><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Handwritten Text Recognition is a technology that is much needed in this world as of today. This digit Recognition system is used to recognize the digits from different sources like emails, bank cheque, papers, images, etc. Before proper implementation of this technology we have relied on writing texts with our own hands which can result in errors. It's difficlut to store and access physical data with efficiency. The project presents recognizing the handwritten digits (0 to 9) from the famous MNIST dataset. Here we will be using atificial neural networks/ convolution neural network.</p>
+        <div class="container">
+           
+            <div class="upload-container">
+                <div class="form-wrapper">
+                    <form class="upload" action="/predict" method="post" enctype="multipart/form-data">
+                        <label id="label" for="upload-image"><i data-feather="file-plus"></i>Select File</label>
+                        <input type="file" name="photo" id="upload-image" hidden />
+                        <button type="submit" id="up_btn"></button>
+                    </form>
+                    <img id="loading" src="{{url_for('static',filename='images/loading.gif')}}">
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
